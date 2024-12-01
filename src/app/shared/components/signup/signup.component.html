@@ -1,0 +1,16 @@
+<div class="sign-up flex p-6 w-full h-full justify-content-center align-items-center">
+    <div class="container flex gap-8 h-fit">
+        <div [formGroup]="accountForm" class="left-section flex flex-column flex-1 gap-y-4">
+            <h1 class="text-[72px] font-bold">Take Control of <span class="text-customHsl-accent"> Your Money </span>
+            </h1>
+            <p class="text-2xl">Test Assignment - Expense Tracker Application</p>
+            <input formControlName="name" class="input-select" type="text" placeholder="Enter Account Name">
+            <button [disabled]="accountForm.invalid" (click)="createAccount( )" class="btn bg-customHsl-text text-white border-none w-fit text-[20px]">
+                Create Account
+            </button>
+        </div>
+        <div class="right-section">
+            <img src="/images/budgeting.jpg" alt="pinterest-photo">
+        </div>
+    </div>
+</div>

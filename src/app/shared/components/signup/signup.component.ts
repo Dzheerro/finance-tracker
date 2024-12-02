@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
+
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -21,7 +22,7 @@ export class SignupComponent {
 
   createAccount() {
     console.log('clicked');
-    this.userService.addUserAccount(this.accountForm.value);
+    this.userService.addUser(this.accountForm.value);
     this.router.navigateByUrl('/home');
   }
 }

@@ -9,7 +9,7 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'detail/:id',
+    path: 'details/:id',
     loadComponent: () => import('./shared/components/budget-details/budget-details.component').then((c) => c.BudgetDetailsComponent),
     canActivate: [AuthGuard]
   },

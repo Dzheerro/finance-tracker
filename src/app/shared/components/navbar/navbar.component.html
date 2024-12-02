@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<nav class="flex justify-between items-center p-6">
+    <div class="logo p-2 cursor-pointer flex items-center gap-x-2">
+        <!-- Logo Generated Using brandcrowd.com -->
+        <img src="/images/logo.png" alt="logo-image" class="w-[50px]">
+        <p class="text-2xl font-bold">Cloudlet - Track Your Budget</p>
+    </div>
+
+    @if (userService.isLoggedIn()) {
+    <button (click)="userService.deleteUserAccount()" class="btn btn-warning">
+        Delete User
+    </button>
+    }
+</nav>

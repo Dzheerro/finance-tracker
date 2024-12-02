@@ -11,7 +11,7 @@ module.exports = {
           muted: 'hsl(183 8% 55%)',
           accent: 'hsl(183 74% 44%)',
           warningopacity: 'hsl(4 66% 63% /.1)',
-          blueopactiyy: 'hsl(183 74% 44% /.04)',
+          blueopacity: 'hsl(183 74% 44% /.04)',
           accentopacity: 'hsl(183 74% 44% /.04)',
           amberopacity: 'hsl(26 90.5% 37.1% /0.04)'
         }

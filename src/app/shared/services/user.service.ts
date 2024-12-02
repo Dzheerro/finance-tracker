@@ -1,34 +1,35 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../models/user.model';
 import { v4 as uuidv4 } from 'uuid';
+
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  User = 'user';
+  USER = 'user';
   constructor(private router: Router) {}
 
-  addUserAccount(name: string) {
+  addUser(name: string) {
     const user: User = {
       id: uuidv4(),
       name: name
     };
 
-    localStorage.setItem(this.User, JSON.stringify(user));
+    localStorage.setItem(this.USER, JSON.stringify(user));
   }
 
-  getUserAccount(): User {
-    return JSON.parse(localStorage.getItem(this.User) || '{}') as User;
+  getUser(): User {
+    return JSON.parse(localStorage.getItem(this.USER) || '{}') as User;
   }
 
   deleteUserAccount() {
     localStorage.clear();
-    this.router.navigateByUrl('/sign-up');
+    this.router.navigateByUrl('sign-up');
   }
 
   isLoggedIn() {
-    return Object.keys(this.getUserAccount()).length > 0;
+    return Object.keys(this.getUser()).length > 0;
   }
 }
